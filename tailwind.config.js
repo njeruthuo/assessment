@@ -18,6 +18,11 @@ module.exports = {
     },
     extend: {
       colors: {
+        DarkBlue: "hsl(218, 23%, 16%)",
+        LightCyan: "hsl(193, 38%, 86%)",
+        NeonGreen: "hsl(150, 100%, 66%)",
+        GrayishBlue: "hsl(217, 19%, 38%)",
+        DarkGrayishBlue: "hsl(217, 19%, 24%)",
         "custom-blue": "#001E6C",
         "custom-white": "#EBF1FE",
         "tiffany-blue": "#8BE8E5",
@@ -55,6 +60,9 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      boxShadow: {
+        "neon-green": "0 0 35px 5px  hsl(150 100% 66% / 1)",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -74,6 +82,11 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+    },
+  },
+  variants: {
+    extend: {
+      boxShadow: ["hover"],
     },
   },
   plugins: [require("tailwindcss-animate")],

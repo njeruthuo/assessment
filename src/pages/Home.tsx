@@ -8,6 +8,7 @@ import {
   Profile,
   TotalViolations,
 } from "@/components/custom";
+import { Modal } from "@/components/custom/inner";
 import { Button } from "@/components/ui/button";
 
 const Home = () => {
@@ -104,6 +105,11 @@ const Home = () => {
 
               <div className="rounded-lg">
                 <CurveChart />
+              </div>
+              <div className="rounded-lg flex justify-center items-center">
+                <Button className="bg-custom-blue text-md">
+                  <Modal />
+                </Button>
               </div>
             </div>
           </div>
