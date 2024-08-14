@@ -9,7 +9,6 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-
 import {
   Card,
   CardContent,
@@ -131,28 +130,6 @@ function AssetsService() {
           </PieChart>
         </ChartContainer>
       </CardContent>
-      {/* <CardFooter className="flex-col gap-2 text-sm">
-        <div className="flex font-medium leading-none justify-end w-full">
-          <Button className="bg-custom-blue text-white flex place-items-center space-x-1">
-            <span>Current Status</span>
-
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="size-4"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-              />
-            </svg>
-          </Button>
-        </div>
-      </CardFooter> */}
     </Card>
   );
 }

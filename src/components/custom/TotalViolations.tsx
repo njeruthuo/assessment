@@ -111,7 +111,7 @@ export function TotalViolations() {
       <CardFooter className="flex-col gap-2 text-sm">
         <div className="flex font-medium leading-none justify-end w-full">
           <Button className="bg-custom-blue text-white flex place-items-center space-x-1">
-            <span>Violations</span>
+            <span className="pt-1">Violations</span>
 
             <svg
               xmlns="http://www.w3.org/2000/svg"

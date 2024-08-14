@@ -16,30 +16,30 @@ const Home = () => {
     <main className="mx-auto w-[90%]">
       <div className="flex">
         {/* Dashboard section */}
-        <section className="w-4/5 border-r">
+        <section className="md:w-4/5 md:border-r">
           <h1 className="text-xl py-4 font-bold">Dashboard</h1>
           <hr />
 
-          <div className="flex justify-between py-4 px-4">
-            <div className="flex place-items-center gap-2">
-              <div className="border-b-custom-blue border-b-4 flex gap-2 place-items-center">
+          <div className="flex justify-between py-4 md:px-4">
+            <div className="flex place-items-end gap-2">
+              <div className="border-b-custom-blue border-b-4 flex gap-2 items-center">
                 <img className="h-6" src="/png.png" alt="" />
                 {/* <p className="text-gray-600 text-sm"></p> */}
                 <input
                   type="text"
                   name=""
-                  className="text-gray-600 text-sm"
+                  className="text-gray-700 w-[100px] md:w-auto placeholder:text-gray-400 focus:text-lg transition-all duration-300 ease-in-out focus:outline-none"
                   placeholder="Search by reg. no"
                   id=""
                 />
               </div>
 
-              <Button className="bg-custom-blue text-white px-2 rounded-md">
+              <Button className="bg-custom-blue text-white md:px-2 rounded-md">
                 Go track
               </Button>
             </div>
-            <div className=" flex place-items-center gap-2 text-xs border border-nav-bg p-1 rounded">
-              {"28 / 05 / 2022"}
+            <div className=" flex place-items-center gap-2 text-xs border border-nav-bg p-2 rounded">
+              <p className="md:pt-1 pt-1.5">28/05/2022</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -56,31 +56,31 @@ const Home = () => {
               </svg>
             </div>
           </div>
-          <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-4">
-            <div className="bg-custom-white rounded-lg">
+          <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:mx-4">
+            <div className="flex flex-col justify-between rounded-lg h-full">
               <DonutChart1 />
             </div>
-            <div className="bg-custom-white rounded-lg">
+            <div className="flex flex-col justify-between rounded-lg h-full">
               <FleetMileage />
             </div>
-            <div className="bg-custom-white rounded-lg">
+            <div className="flex flex-col justify-between rounded-lg h-full">
               <TotalViolations />
             </div>
           </div>
 
           <div className="my-8">
-            <div className="flex justify-between mx-auto w-[95%] place-items-center my-4">
+            <div className="flex justify-between mx-auto w-[95%] items-center my-4">
               <h2 className="text-custom-blue text-xl font-bold">Fleet</h2>
 
-              <div className=" flex place-items-center gap-2 text-xs border border-nav-bg p-1 rounded">
-                {"18/05/2022"}
+              <div className=" flex flex-row items-center gap-2 text-xs border border-custom-blue p-2 rounded">
+                <p className="mt-1">18/05/2022</p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="blue"
-                  className="size-5"
+                  className="size-6"
                 >
                   <path
                     strokeLinecap="round"
@@ -95,14 +95,14 @@ const Home = () => {
               <div className=" rounded-lg">
                 <Licenses />
               </div>
-              <div className="bg-custom-white rounded-lg">
+              <div className="rounded-lg">
                 <AlertSummary />
               </div>
-              <div className="bg-custom-white rounded-lg">
+              <div className="rounded-lg">
                 <AssetsService />
               </div>
 
-              <div className="bg-custom-white rounded-lg">
+              <div className="rounded-lg">
                 <CurveChart />
               </div>
             </div>
@@ -110,7 +110,7 @@ const Home = () => {
         </section>
 
         {/* Profile section */}
-        <div className="w-1/5">
+        <div className="hidden md:block w-1/5">
           <Profile />
         </div>
       </div>

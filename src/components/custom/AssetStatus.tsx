@@ -110,7 +110,7 @@ export function DonutChart1() {
       <CardFooter className="flex-col gap-2 text-sm">
         <div className="flex font-medium leading-none justify-end w-full">
           <Button className="bg-custom-blue text-white flex place-items-center space-x-1">
-            <span>Current Status</span>
+            <span className="pt-1">Current Status</span>
 
             <svg
               xmlns="http://www.w3.org/2000/svg"
