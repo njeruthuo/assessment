@@ -11,25 +11,25 @@ interface NotificationData {
 const Profile = () => {
   const data: NotificationData[] = [
     {
-      img: "",
+      img: "fa-battery-half",
       vehicle: "KBL 175G",
       time: "10/2/2023 14:12",
       location: "Kapenguria depot",
     },
     {
-      img: "",
+      img: "fa-clock",
       vehicle: "KBL 155G",
       time: "10/2/2023 14:12",
       location: "KCC Molo",
     },
     {
-      img: "",
+      img: "fa-car",
       vehicle: "KBL 175G",
       time: "10/2/2023 14:19",
       location: "Mbaraki depot",
     },
     {
-      img: "",
+      img: "fa-train",
       vehicle: "KBL 165G",
       time: "10/2/2023 14:17",
       location: "Mbaraki depot",
@@ -60,9 +60,11 @@ const Profile = () => {
         <h2 className="text-gray-500 text-xl my-4">READ NOTIFICATIONS</h2>
 
         <div>
-          {data.map((item, index) => {
+          {/* {data.map((item, index) => {
             return <NotificationCard key={index} {...item} />;
-          })}
+          })} */}
+
+          <NotificationCard/>
         </div>
       </div>
     </div>
