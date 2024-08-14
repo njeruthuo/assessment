@@ -33,7 +33,7 @@ const chartConfig = {
 
 function FleetMileage() {
   return (
-    <Card className="bg-custom-white">
+    <Card className="bg-custom-white card">
       <CardHeader>
         <CardTitle className="text-custom-blue">Fleet Mileage</CardTitle>
         <CardDescription className="flex justify-end py-2">
@@ -90,7 +90,7 @@ function FleetMileage() {
       </CardContent>
       <CardFooter className="flex-col items-start gap-2 text-sm">
         <div className="flex font-medium leading-none justify-end w-full">
-          <Button className="bg-custom-blue text-white mt-2">
+          <Button className="bg-custom-blue text-white -mt-2">
             <div className="flex place-items-center space-x-1">
               <p className="pt-1">Movement</p>
               <svg

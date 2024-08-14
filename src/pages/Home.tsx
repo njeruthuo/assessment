@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 const Home = () => {
   // const date = "28/05/2022"; // this can be fetched from an API
   return (
-    <main className="mx-auto w-[90%]">
+    <main className="mx-4">
       <div className="flex">
         {/* Dashboard section */}
         <section className="md:w-4/5 md:border-r">
@@ -57,18 +57,18 @@ const Home = () => {
             </div>
           </div>
           <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:mx-4">
-            <div className="flex flex-col justify-between rounded-lg h-full">
+            <div className="flex flex-col justify-between rounded-lg min-h-[400px]">
               <DonutChart1 />
             </div>
-            <div className="flex flex-col justify-between rounded-lg h-full">
+            <div className="flex flex-col justify-between rounded-lg min-h-[400px]">
               <FleetMileage />
             </div>
-            <div className="flex flex-col justify-between rounded-lg h-full">
+            <div className="flex flex-col justify-between rounded-lg min-h-[400px]">
               <TotalViolations />
             </div>
           </div>
 
-          <div className="my-8">
+          <div className="">
             <div className="flex justify-between mx-auto w-[95%] items-center my-4">
               <h2 className="text-custom-blue text-xl font-bold">Fleet</h2>
 

@@ -65,6 +65,10 @@
   #nav p {
     @apply hidden sm:flex;
   }
+
+  .card{
+    @apply h-[350px];
+  }
   * {
     font-family: "Anek Devanagari", sans-serif;
     @apply border-border;
