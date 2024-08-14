@@ -2,39 +2,45 @@ import { Separator } from "../ui/separator";
 import NotificationCard from "./NotificationCard";
 
 interface NotificationData {
+  id: number;
   img: string;
   vehicle: string;
   time: string;
   location: string;
 }
 
+const notifications: NotificationData[] = [
+  {
+    id: 1,
+    img: "fa-battery-half",
+    vehicle: "KBL 175 G",
+    time: "10/2/2020 -14:00",
+    location: "Kapenguria Deport",
+  },
+  {
+    id: 2,
+    img: "fa-car",
+    vehicle: "KBS 195 H",
+    time: "12/2/2020 -16:00",
+    location: "Nyeri Deport",
+  },
+  {
+    id: 3,
+    img: "fa-train",
+    vehicle: "KBS 178 V",
+    time: "14/2/2020 -16:00",
+    location: "Nairobi Deport",
+  },
+  {
+    id: 4,
+    img: "fa-clock",
+    vehicle: "KBV 17F V",
+    time: "14/2/2020 -16:00",
+    location: "Taita Deport",
+  },
+];
+
 const Profile = () => {
-  const data: NotificationData[] = [
-    {
-      img: "fa-battery-half",
-      vehicle: "KBL 175G",
-      time: "10/2/2023 14:12",
-      location: "Kapenguria depot",
-    },
-    {
-      img: "fa-clock",
-      vehicle: "KBL 155G",
-      time: "10/2/2023 14:12",
-      location: "KCC Molo",
-    },
-    {
-      img: "fa-car",
-      vehicle: "KBL 175G",
-      time: "10/2/2023 14:19",
-      location: "Mbaraki depot",
-    },
-    {
-      img: "fa-train",
-      vehicle: "KBL 165G",
-      time: "10/2/2023 14:17",
-      location: "Mbaraki depot",
-    },
-  ];
   return (
     <div className="w-full m-4 items-center flex flex-col">
       <div>
@@ -60,11 +66,11 @@ const Profile = () => {
         <h2 className="text-gray-500 text-xl my-4">READ NOTIFICATIONS</h2>
 
         <div>
-          {/* {data.map((item, index) => {
+          {notifications.map((item, index) => {
             return <NotificationCard key={index} {...item} />;
-          })} */}
+          })}
 
-          <NotificationCard/>
+          {/* <NotificationCard/> */}
         </div>
       </div>
     </div>
