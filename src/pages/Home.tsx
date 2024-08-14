@@ -56,7 +56,7 @@ const Home = () => {
               </svg>
             </div>
           </div>
-          <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-4">
             <div className="bg-custom-white rounded-lg">
               <DonutChart1 />
             </div>
@@ -91,8 +91,8 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-              <div className="bg-custom-white rounded-lg">
+            <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-4">
+              <div className=" rounded-lg">
                 <Licenses />
               </div>
               <div className="bg-custom-white rounded-lg">

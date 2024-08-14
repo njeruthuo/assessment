@@ -165,7 +165,7 @@ const chartConfig = {
 
 function FleetMileage() {
   return (
-    <Card>
+    <Card className="bg-custom-white">
       <CardHeader>
         <CardTitle className="text-custom-blue">Fleet Mileage</CardTitle>
         <CardDescription className="flex justify-end py-1.5">

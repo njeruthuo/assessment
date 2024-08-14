@@ -53,7 +53,7 @@ const chartConfig = {
   }, []);
 
   return (
-    <Card className="flex flex-col">
+    <Card className="flex flex-col bg-custom-white">
       <CardHeader className="pb-0">
         <CardTitle className="text-custom-blue">Licenses</CardTitle>
       </CardHeader>

@@ -28,7 +28,7 @@ const chartConfig = {
 
 function CurveChart() {
   return (
-    <Card>
+    <Card className="bg-custom-white">
       <CardHeader>
         <CardTitle className="text-custom-blue">BarChart Example</CardTitle>
         {/* <CardDescription>January - June 2024</CardDescription> */}

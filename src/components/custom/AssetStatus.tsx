@@ -53,7 +53,7 @@ export function DonutChart1() {
   }, []);
 
   return (
-    <Card className="flex flex-col">
+    <Card className="flex flex-col bg-custom-white">
       <CardHeader className="pb-0">
         <CardTitle className="text-custom-blue">Asset status</CardTitle>
       </CardHeader>

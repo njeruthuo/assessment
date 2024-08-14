@@ -12,7 +12,7 @@ import { Separator } from "../ui/separator";
 
 function AlertSummary() {
   return (
-    <Card className="flex flex-col">
+    <Card className="flex flex-col bg-custom-white">
       <CardHeader className="pb-0">
         <CardTitle className="text-custom-blue">Alert Summary</CardTitle>
         <Separator />
