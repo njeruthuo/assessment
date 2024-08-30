@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Label, Pie, PieChart } from "recharts";
-
 import {
   Card,
   CardContent,
@@ -15,11 +14,7 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 import { Button } from "../ui/button";
-const chartData = [
-  { tab: "Active", value: 40, fill: "#00A8A8" },
-  { tab: "Garage", value: 21, fill: "#F03C3C" },
-  { tab: "Yard", value: 60, fill: "#F8A019" },
-];
+import useFetchStatus from "@/lib/actions/useFetchStatus";
 
 const chartConfig = {
   value: {
@@ -48,9 +43,26 @@ const chartConfig = {
 } satisfies ChartConfig;
 
 export function DonutChart1() {
-  const totalvalue = React.useMemo(() => {
+  const { data } = useFetchStatus();
+
+  // Transform the fetched data into the format expected by the chart
+  const chartData = React.useMemo(() => {
+    if (!data) return [];
+    return Object.keys(data).map((status) => ({
+      tab: status,
+      value: data[status],
+      fill:
+        status === "Active"
+          ? "#00A8A8"
+          : status === "Garage"
+          ? "#F03C3C"
+          : "#F8A019",
+    }));
+  }, [data]);
+
+  const totalValue = React.useMemo(() => {
     return chartData.reduce((acc, curr) => acc + curr.value, 0);
-  }, []);
+  }, [chartData]);
 
   return (
     <Card className="flex flex-col bg-custom-white card">
@@ -96,7 +108,7 @@ export function DonutChart1() {
                           y={viewBox.cy}
                           className="fill-foreground text-3xl font-bold"
                         >
-                          {totalvalue.toLocaleString()}
+                          {totalValue.toLocaleString()}
                         </tspan>
                       </text>
                     );
